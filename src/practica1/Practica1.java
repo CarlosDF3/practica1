@@ -19,10 +19,10 @@ public class Practica1 {
 		
 		fc.IngresaNotas();
 		
-		fc.comprobarcion();
+		fc.comprobacion();
 		
 
-		fc.Calculonotas();
+		fc.Calcularnotas();
 		
 		fc.MostrarNotas();
 		

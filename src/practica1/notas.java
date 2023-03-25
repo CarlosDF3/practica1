@@ -13,7 +13,7 @@ public class notas {
          * Además creamos un nuevo objeto scanner para poder introducir los valores por consola.
          */
 	double uf1, uf2, uf3;
-	double media1, media2, media3, notfinal;
+	double not1, not2, not3, notfinal;
 	
 	Scanner entrada = new Scanner(System.in);
 	
@@ -45,7 +45,7 @@ public class notas {
          * Para ello usamos un if else.
          */
 	
-	public void comprobarcion(){
+	public void comprobacion(){
 		
 		if (uf1>10) {
 			System.out.println(" nota1 mal introducida");
@@ -77,12 +77,12 @@ public class notas {
          * La última variable es la suma final y nota definitiva.
          */
 	
-	public void Calculonotas() {
-		media1= uf1*0.35;
-		media2 = uf2 * 0.35;
-		media3 = uf3 * 0.30;
+	public void Calcularnotas() {
+		not1= uf1*0.25;
+		not2 = uf2 * 0.30;
+		not3 = uf3 * 0.45;
 		
-		notfinal = media1 + media2+ media3;
+		notfinal = not1 + not2+ not3;
 		
 		
 	}
@@ -92,16 +92,16 @@ public class notas {
          */
 	public void MostrarNotas() {
 		
-		System.out.println(" notas introducidas son:");
-		System.out.println(" nota1 = " + uf1);
-		System.out.println(" nota2 = " + uf2);
-		System.out.println(" nota3 = " + uf3);
+		System.out.println(" Las notas introducidas son:");
+		System.out.println(" La nota1 = " + uf1);
+		System.out.println(" La nota2 = " + uf2);
+		System.out.println(" La nota3 = " + uf3);
 		
-		System.out.println(" acumuado 1 = "+ media1);
-		System.out.println(" acumuado 2 = "+ media2);
-		System.out.println(" acumuado 3 = "+ media3);
+		System.out.println(" La media 1 = "+ not1);
+		System.out.println(" La media 2 = "+ not2);
+		System.out.println(" La media 3 = "+ not3);
 		
-		System.out.println(" nota definitiva es = "+ notfinal);
+		System.out.println(" La nota final es = "+ notfinal);
 		
 	}
         /**
@@ -110,12 +110,12 @@ public class notas {
 	public void aprobado() {
 			
 			if(notfinal<5 && notfinal>=0) {
-				System.out.println("suspendio");
+				System.out.println("Has suspendido");
 			}else {
 				if (notfinal>=5 && notfinal<=10 ) {
-				System.out.println("aprobado");
+				System.out.println("Has aprobado!!");
 				}else {
-					System.out.println(" error en la notas");
+					System.out.println(" Vaya! hay un error en tus notas");
 				}
 			}
 		}
