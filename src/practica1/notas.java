@@ -13,7 +13,7 @@ public class notas {
          * Además creamos un nuevo objeto scanner para poder introducir los valores por consola.
          */
 	double uf1, uf2, uf3;
-	double acu1, acu2, acu3, def;
+	double media1, media2, media3, notfinal;
 	
 	Scanner entrada = new Scanner(System.in);
 	
@@ -78,11 +78,11 @@ public class notas {
          */
 	
 	public void Calculonotas() {
-		acu1= uf1*0.35;
-		acu2 = uf2 * 0.35;
-		acu3 = uf3 * 0.30;
+		media1= uf1*0.35;
+		media2 = uf2 * 0.35;
+		media3 = uf3 * 0.30;
 		
-		def = acu1 + acu2+ acu3;
+		notfinal = media1 + media2+ media3;
 		
 		
 	}
@@ -90,18 +90,18 @@ public class notas {
          * El cuarto método imprime los valores introducidos inicialmente y el calculo de valores posteriores.
          * Así como la nota final.
          */
-	public void Mostrar() {
+	public void MostrarNotas() {
 		
 		System.out.println(" notas introducidas son:");
 		System.out.println(" nota1 = " + uf1);
 		System.out.println(" nota2 = " + uf2);
 		System.out.println(" nota3 = " + uf3);
 		
-		System.out.println(" acumuado 1 = "+ acu1);
-		System.out.println(" acumuado 2 = "+ acu2);
-		System.out.println(" acumuado 3 = "+ acu3);
+		System.out.println(" acumuado 1 = "+ media1);
+		System.out.println(" acumuado 2 = "+ media2);
+		System.out.println(" acumuado 3 = "+ media3);
 		
-		System.out.println(" nota definitiva es = "+ def);
+		System.out.println(" nota definitiva es = "+ notfinal);
 		
 	}
         /**
@@ -109,10 +109,10 @@ public class notas {
          */
 	public void aprobado() {
 			
-			if(def<5 && def>=0) {
+			if(notfinal<5 && notfinal>=0) {
 				System.out.println("suspendio");
 			}else {
-				if (def>=5 && def<=10 ) {
+				if (notfinal>=5 && notfinal<=10 ) {
 				System.out.println("aprobado");
 				}else {
 					System.out.println(" error en la notas");

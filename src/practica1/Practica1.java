@@ -14,7 +14,7 @@ public class Practica1 {
      * @param args 
      */
     public static void main(String[] args) {
-      // creamos mecanimos para llamar a cualquier metodo fuero de la clase
+     
 		notas fc= new notas();
 		
 		fc.IngresaNotas();
@@ -24,7 +24,7 @@ public class Practica1 {
 
 		fc.Calculonotas();
 		
-		fc.Mostrar();
+		fc.MostrarNotas();
 		
 		fc.aprobado();
     }
