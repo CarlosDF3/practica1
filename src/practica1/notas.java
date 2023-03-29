@@ -12,8 +12,8 @@ public class notas {
          * Aquí declaramos nuestras variables.
          * Además creamos un nuevo objeto scanner para poder introducir los valores por consola.
          */
-	double uf1, uf2, uf3;
-	double not1, not2, not3, notfinal;
+	double uf1, uf2, uf3, notRecup;
+	double not1, not2, not3, notfinal, NR;
 	
 	Scanner entrada = new Scanner(System.in);
 	
@@ -28,16 +28,18 @@ public class notas {
 		
 		uf1= entrada.nextDouble();
 
-		
-		
 		System.out.print("ingrese nota 2: ");
 		
 		uf2= entrada.nextDouble();
-		System.out.print("ingrese nota 3: ");
+		
+                System.out.print("ingrese nota 3: ");
 		
 		uf3= entrada.nextDouble();
+                
+                System.out.print("Ingrese su nota de recuperación si la hubiese, "
+                        + "sino ponga un numero aleatorio del 1 al 10: ");
 		
-	
+                notRecup= entrada.nextDouble();
 	}
 	
 	/**
@@ -66,6 +68,13 @@ public class notas {
 		}else {
 			System.out.println(" nota3 correcta");
 		}
+                
+                if (notRecup>10) {
+			System.out.println(" nota de recuperación mal introducida");
+			
+		}else {
+			System.out.println(" nota recuperación es correcta");
+		}
 		
 			
 		
@@ -81,6 +90,8 @@ public class notas {
 		not1= uf1*0.25;
 		not2 = uf2 * 0.30;
 		not3 = uf3 * 0.45;
+                
+                NR = notRecup;
 		
 		notfinal = not1 + not2+ not3;
 		
@@ -102,6 +113,7 @@ public class notas {
 		System.out.println(" La media 3 = "+ not3);
 		
 		System.out.println(" La nota final es = "+ notfinal);
+                
 		
 	}
         /**
@@ -111,6 +123,17 @@ public class notas {
 			
 			if(notfinal<5 && notfinal>=0) {
 				System.out.println("Has suspendido");
+                                if (NR<5 && NR>=0){
+                                    System.out.println("Lo lamento, has vuelto a suspender");
+                                }
+                                else{
+                                    if (NR>=5 && NR<=10 ) {
+                                    System.out.println("Pero en el examen de recuperación has sacado un"
+                                            + NR + "así que estas aprobado!!");
+				}else {
+					System.out.println(" Vaya! hay un error en tus notas");
+				}
+                                }
 			}else {
 				if (notfinal>=5 && notfinal<=10 ) {
 				System.out.println("Has aprobado!!");
